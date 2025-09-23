@@ -14,7 +14,26 @@ public class Aluno extends Pessoa {
     public String getCodAluno() {
         return this.codAluno;
     }
-    public void setCodAluno(String codAluno) {
-        this.codAluno = codAluno;
+    
+    // método para gerar o código do aluno
+    public String setCodAluno(String nome, String RA) {
+        String iniciais = this.extrairIniciais(nome);
+        return this.codAluno = iniciais + "_" + RA;
+    }
+    
+    public String extrairIniciais(String nomeAluno) {
+        if (nomeAluno == null || nomeAluno.trim().isEmpty()) {
+            return "";
+        }
+        
+        String[] partesNome = nomeAluno.trim().split("\\s+");
+        StringBuilder iniciais = new StringBuilder();
+        
+        for (String parte : partesNome) {
+            if (!parte.isEmpty()) {
+                iniciais.append(parte.charAt(0));
+            }
+        }
+        return iniciais.toString().toUpperCase();
     }
 }
