@@ -4,6 +4,13 @@ public class Endereco {
     private int numero;
     private String cidade;
     
+    // Construtor
+    public Endereco(String logradouro, int numero, String cidade) {
+        this.logradouro = logradouro;
+        this.numero = numero;
+        this.cidade = cidade;
+    }
+    
     public String getLogradouro() {
         return this.logradouro;
     }

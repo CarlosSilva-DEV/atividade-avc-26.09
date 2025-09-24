@@ -3,6 +3,12 @@ public class Pessoa {
     private String nome;
     private int idade;
     
+    // Construtor
+    public Pessoa(String nome, int idade) {
+        this.nome = nome;
+        this.idade = idade;
+    }
+    
     // getters e setter
     public String getNome() {
         return this.nome;
