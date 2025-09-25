@@ -11,6 +11,7 @@ public class Endereco {
         this.cidade = cidade;
     }
     
+    // getters e setters
     public String getLogradouro() {
         return this.logradouro;
     }
